@@ -16,18 +16,23 @@
    int main()
    {
        int x,flag=0;
-       cout<< "number =";
+      
        cin>>x;
-       for(auto i=1;i<=sqrt(x);i++){
+       if(x<=1){
+        flag =1;
+       }
+       else {
+       for(auto i=2;i<=sqrt(x);i++){
         if(x%i==0){
-            
+            flag =1;
             break;
         }
 
-       }
+       }}
        if(flag==1)
-       cout<<"Prime "<<endl;
-      else  cout<<"NOT Prime "<<endl;
+       cout<<"NOT Prime "<<endl;
+
+      else  cout<<" Prime "<<endl;
        return 0;
    }
    
